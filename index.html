@@ -11,10 +11,15 @@
 <body>
     <div class="wrapper">
         <section id="mainVisual">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="mainVisual-img vw-100 vh-100 bg-dark d-md-flex align-items-center">
-                        <p class="text-white display-3">Nexit.inc</p>
+            <div class="position-relative vh-100">
+                <div class="position-absolute mainVisual-img">
+                    <img class="vh-100 vw-100 mainVisual-img" src="./assets/img/mainvisual.jpg" alt="">
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-lg-5 d-flex flex-column ml-5 py-5 pl-5">
+                            <h1 class="display-4 pt-3 text-white">Nexit.inc</h1>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -109,7 +114,7 @@
                 <div class="row py-4">
                     <div class="col-12 col-md-6 mx-auto">
                         <div class="members-img__w text-center py-4">
-                            <img class="rounded-circle" src="https://placehold.jp/200x200.png">
+                            <img class="members-img rounded-circle" src="./assets/img/man.jpg">
                         </div>
                         <div class="members-text__w">
                             <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
@@ -122,7 +127,7 @@
                 <div class="row py-4">
                     <div class="col-12 col-md-6 mx-auto">
                         <div class="members-img__n text-center py-4">
-                            <img class="rounded-circle" src="https://placehold.jp/200x200.png">
+                            <img class="members-img rounded-circle" src="./assets/img/man.jpg">
                         </div>
                         <div class="members-text__n">
                             <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
@@ -174,40 +179,45 @@
                 </div>
             </div>
         </section>
-        <section id="Contact">
-            <div class="container-fluid bg-secondary py-5 mt-5 opacity-4">
-                <div class="col-11 col-md-10 bg-light mx-auto py-5">
-                    <div class="row">
-                        <div class="col-12 col-md-6">
-                            <div class="contact-title">
-                                <h2>Contact</h2>
-                            </div>    
-                            <div class="contact-text">
-                                <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-                                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-                                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-                                </p>
+        <section id="Contact mx-0">
+            <div class="container-fluid pt-5 mt-5 px-0">
+                <div class="position-relative vh-100">
+                    <div class="position-absolute mainVisual-img">
+                        <img class="vh-100 vw-100 mainVisual-img" src="./assets/img/contact.jpg" alt="">
+                    </div>
+                    <div class="col-11 col-md-10 bg-light py-4 form-box mx-auto">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <div class="contact-title">
+                                    <h2>Contact</h2>
+                                </div>    
+                                <div class="contact-text">
+                                    <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                                        ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                                        ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                                    </p>
+                                </div>
+                            </div> 
+                            <div class="col-12 col-md-6">
+                                <form class="text-center">
+                                    <div class="form-group">
+                                        <input type="text" id="contactInputName" placeholder="お名前">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" id="contactInputEmail" placeholder="メールアドレス">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" id="contactInputCompany" placeholder="会社名">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" id="contactInputrequire" placeholder="ご用件">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea id="contactInputContent" placeholder="お問い合わせ内容"></textarea>
+                                    </div>
+                                    <button type="submit">送信</button>
+                                </form>
                             </div>
-                        </div> 
-                        <div class="col-12 col-md-6">
-                            <form class="text-center">
-                                <div class="form-group">
-                                    <input type="text" id="contactInputName" placeholder="お名前">
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" id="contactInputEmail" placeholder="メールアドレス">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" id="contactInputCompany" placeholder="会社名">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" id="contactInputrequire" placeholder="ご用件">
-                                </div>
-                                <div class="form-group">
-                                    <input type="textbox" id="contactInputContent" placeholder="お問い合わせ内容">
-                                </div>
-                                <button type="submit">送信</button>
-                            </form>
                         </div>
                     </div>
                 </div>
