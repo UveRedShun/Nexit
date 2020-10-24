@@ -1,13 +1,24 @@
 @import '../util/index';
 
 // ==========================================================================
+// $MainVisual Img
+// ==========================================================================
+
+.mainVisual-img{
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+// ==========================================================================
 // $Section Title
 // ==========================================================================
 
 .section-title{
-    font-size: 8rem;
+    margin-top: 5rem;
+    font-size: 6rem;
     @include respond-below(md) {
-        font-size: 5rem;
+        font-size: 3rem;
     }
 }
 
@@ -20,7 +31,7 @@
     height: 25rem;
     @include respond-below(md) {
         width: 100%;
-        height: 15rem;
+        height: 25rem;
     }
 }
 
@@ -33,8 +44,27 @@
     height: 25rem;
     @include respond-below(md) {
         width: 100%;
-        height: 15rem;
+        height: 25rem;
     }
+}
+
+// ==========================================================================
+// $Members Img
+// ==========================================================================
+
+.members-img{
+    width: 25rem;
+    height: 25rem;
+    box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.226);
+    @include respond-below(md) {
+        width: 15rem;
+        height: 15rem;
+        box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.226);
+    }
+}
+
+.members-img__w img{
+    box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.226);
 }
 
 // ==========================================================================
@@ -50,4 +80,26 @@
         width: 100%;
         height: 15rem;
     }
+}
+
+// ==========================================================================
+// $Form
+// ==========================================================================
+
+.form-box{
+    top: 10%;
+    width: 80%;
+    height: 80vh;
+    opacity: 80%;
+}
+
+.form-group input{
+    width: 100%;
+    margin: 0.5% 0;
+}
+
+.form-group textarea {
+    resize: none;
+    width: 100%;
+    height: 8rem;
 }
