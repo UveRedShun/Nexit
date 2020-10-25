@@ -41,6 +41,7 @@
     font-size: 7rem;
     @include respond-below(md) {
         font-size: 4rem;
+        margin: 2rem 0 1rem 0;
     }
 }
 
@@ -54,7 +55,7 @@
 
 .about-img{
     width: 100%;
-    height: 30rem;
+    height: 25rem;
     @include respond-below(md) {
         width: 100%;
         height: 15rem;
@@ -93,43 +94,54 @@
     top: -100px;
     position: absolute;
     opacity: 80%;
+    @include respond-below(md) {
+        width: 500px;
+        height: 120%;
+        transform: rotate(-15deg) translateX(0);
+        background-color: $black;
+        z-index: 2;
+        right: -320px;
+        top: -70px;
+        position: absolute;
+        opacity: 80%;
+    }
 }
 
-.service-box:nth-child(3){
-    margin: 10rem 0;
-}
+// .service-box:nth-child(3){
+//     margin: 10rem 0;
+//     @include respond-below(md) {
+//         margin: 3rem 0;
+//     }
+// }
 
 // ==========================================================================
 // $Services HeadLine
 // ==========================================================================
 
 .services-headline__Pro{
-    top: 5%;
+    top: 10%;
     right: 13%;
     z-index: 100;
     @include respond-below(md) {
-        top: 65%;
-        left: 1%;
+        right: -50%;
     }
 }
 
 .services-headline__Seo{
-    top: 5%;
+    top: 10%;
     right: 18%;
     z-index: 100;
     @include respond-below(md) {
-        top: 65%;
-        left: 1%;
+        right: -45%;
     }
 }
 
 .services-headline__Edu{
-    top: 5%;
-    right: 5%;
+    top: 10%;
+    right: 6%;
     z-index: 100;
     @include respond-below(md) {
-        top: 65%;
-        left: 1%;
+        right: -55%;
     }
 }
 
@@ -137,7 +149,7 @@
     font-size: 3.5rem;
     color: $white;
     @include respond-below(md) {
-        font-size: 4.5rem;
+        font-size: 2rem;
     }
 }
 
@@ -172,25 +184,35 @@
     }
 }
 
+.contact-img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
 // ==========================================================================
 // $Form
 // ==========================================================================
 
 .form-box{
     top: 10%;
-    width: 80%;
+    width: 100%;
     height: 100%;
     opacity: 80%;
 }
 
 .form-group input{
-    width: 100%;
-    margin: 0.5% 0;
+    width: 80%;
+    margin: 1% 0;
+    @include respond-below(md) {
+        width: 100%;
+        margin: 0.5% 0;
+    }
 }
 
 .form-group textarea {
     resize: none;
-    width: 100%;
+    width: 80%;
     height: 8rem;
 }
 
