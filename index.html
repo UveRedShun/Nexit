@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <title>Nexit</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/scss/style.css">
 </head>
 <body>
@@ -56,7 +57,7 @@
                         </div>    
                     </div>
                 </div>
-                <div class="row mt-3">
+                <div class="row">
                     <div class="col-12 col-md-11 d-md-flex flex-row-reverse mx-auto">
                         <div class="about-image col-md-5 mx-auto">
                             <img class="about-img" src="./assets/img/about.jpg">
@@ -97,8 +98,8 @@
                     </div>
                 </div>
                 <div class="row service-box my-5">
-                    <div class="col-12 col-md-11 d-md-flex flex-row mx-auto py-0">
-                        <div class="services-imgBox col-md-5 mx-auto">
+                    <div class="col-12 col-md-11 d-md-flex flex-row mx-auto">
+                        <div class="services-imgBox__Seo col-md-5 mx-auto">
                             <img class="services-img" src="./assets/img/seo.jpg">
                             <div class="box-slicer"></div>
                             <div class="col-lg-5 position-absolute services-headline__Seo">
@@ -115,7 +116,7 @@
                 </div>
                 <div class="row service-box">
                     <div class="col-12 col-md-11 d-md-flex flex-row-reverse mx-auto">
-                        <div class="services-imgBox col-md-5 mx-auto">
+                        <div class="services-imgBox col-md-5 mx-auto test">
                             <img class="services-img" src="./assets/img/website.jpg">
                             <div class="box-slicer"></div>
                             <div class="col-lg-5 position-absolute services-headline__Edu">
@@ -133,7 +134,7 @@
             </div>
         </section>
         <section id="Members">
-            <div class="container-fluid my-5">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
                         <div class="members-title">
@@ -141,7 +142,7 @@
                         </div>    
                     </div>
                 </div>
-                <div class="row py-4">
+                <div class="row">
                     <div class="col-12 col-md-4 mx-auto">
                         <div class="members-img__w text-center py-4">
                             <img class="members-img rounded-circle" src="./assets/img/man.jpg">
@@ -177,32 +178,65 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-4">
-                        <div class="card">
-                            <img class="blog-img" src="./assets/img/blogs.jpg">
-                            <div class="card-body">
-                                <h5 class="card-title"></h5>
-                                <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+                    <div class="swiper-container py-5">
+                        <div class="swiper-wrapper">
+                            <div class="blog-box swiper-slide">
+                                <div class="card">
+                                    <img class="blog-img" src="./assets/img/blogs.jpg">
+                                    <div class="card-body pt-0">
+                                        <h5 class="card-title"></h5>
+                                        <span class="blog-tag">News</span><br>
+                                        <span class="blog-cd">2020/10/10</span>
+                                        <p class="blog-title">公式サイトリリース！</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog-box swiper-slide">
+                                <div class="card">
+                                    <img class="blog-img" src="./assets/img/blogs.jpg">
+                                    <div class="card-body pt-0">
+                                        <h5 class="card-title"></h5>
+                                        <span class="blog-tag">News</span><br>
+                                        <span class="blog-cd">2020/10/10</span>
+                                        <p class="blog-title">公式サイトリリース！</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog-box swiper-slide">
+                                <div class="card">
+                                    <img class="blog-img" src="./assets/img/blogs.jpg">
+                                    <div class="card-body pt-0">
+                                        <h5 class="card-title"></h5>
+                                        <span class="blog-tag">News</span><br>
+                                        <span class="blog-cd">2020/10/10</span>
+                                        <p class="blog-title">公式サイトリリース！</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog-box swiper-slide">
+                                <div class="card">
+                                    <img class="blog-img" src="./assets/img/blogs.jpg">
+                                    <div class="card-body pt-0">
+                                        <h5 class="card-title"></h5>
+                                        <span class="blog-tag">News</span><br>
+                                        <span class="blog-cd">2020/10/10</span>
+                                        <p class="blog-title">公式サイトリリース！</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog-box swiper-slide">
+                                <div class="card">
+                                    <img class="blog-img" src="./assets/img/blogs.jpg">
+                                    <div class="card-body pt-0">
+                                        <h5 class="card-title"></h5>
+                                        <span class="blog-tag">News</span><br>
+                                        <span class="blog-cd">2020/10/10</span>
+                                        <p class="blog-title">公式サイトリリース！</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="card">
-                            <img class="blog-img" src="./assets/img/blogs.jpg">
-                            <div class="card-body">
-                                <h5 class="card-title"></h5>
-                                <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="card">
-                            <img class="blog-img" src="./assets/img/blogs.jpg">
-                            <div class="card-body">
-                                <h5 class="card-title"></h5>
-                                <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
-                            </div>
-                        </div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </div>
@@ -215,8 +249,8 @@
                     </div>
                     <div class="col-11 col-md-10 py-5 form-box mx-auto">
                         <div class="row bg-light py-5">
-                            <div class="col-12 col-md-6">
-                                <div class="contact-title">
+                            <div class="col-12 col-md-5 ml-auto">
+                                <div class="section-title__contact">
                                     <h2>Contact</h2>
                                 </div>    
                                 <div class="contact-text my-4">
@@ -225,7 +259,7 @@
                                     </p>
                                 </div>
                             </div> 
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-md-5 mr-auto">
                                 <form class="text-center">
                                     <div class="form-group">
                                         <input type="text" id="contactInputName" placeholder="お名前">
@@ -262,8 +296,11 @@
             </div>
         </footer>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <script src="assets/js/style.js"></script>
 </body>
 </html>

@@ -43,21 +43,53 @@
 // ==========================================================================
 
 .section-title{
-    margin: 5rem 0 3rem 0;
-    font-size: 7rem;
+    margin: 5rem 0 3rem 3rem;
+    font-size: 6rem;
+    padding-left: 2rem;
+    border-left: solid 10px #C4C4C4;
     @include respond-below(md) {
-        font-size: 4rem;
-        margin: 2rem 0 1rem 0;
+        font-size: 3rem;
+        margin: 2rem 0 2rem 0;
+        padding-left: 1rem;
+        border-left: solid 5px #C4C4C4;
+    }
+}
+
+.section-title__contact{
+    margin: 0 0 3rem 0;
+    font-size: 3rem;
+    padding-left: 1rem;
+    border-left: solid 7px #C4C4C4;
+    @include respond-below(md) {
+        font-size: 3rem;
+        margin: 2rem 0 2rem 0;
+        padding-left: 1rem;
+        border-left: solid 5px #C4C4C4;
     }
 }
 
 .section-text{
     padding-top: 3rem;
+    @include respond-below(md) {
+        padding-top: 1.5rem;
+    }
 }
 
 // ==========================================================================
 // $About Img
 // ==========================================================================
+
+.about-image{
+    transform:translateX(150px);
+    opacity: 0;
+    transition:opacity 2s,transform 1.5s;
+    padding: 0;
+    @include respond-below(md) {
+        transform:translateY(50px);
+        opacity: 0;
+        transition:opacity 1s,transform 1s;
+    }
+}
 
 .about-img{
     width: 100%;
@@ -88,6 +120,29 @@
     padding: 0;
     position: relative;
     overflow: hidden;
+    transform:translateX(100px);
+    opacity: 0;
+    transition:opacity 1s,transform 1s;
+    @include respond-below(md) {
+        transform:translateY(50px);
+        opacity: 0;
+        transition:opacity 1s,transform 1s;
+    }
+}
+
+.services-imgBox__Seo{
+    width: 100%;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    transform:translateX(-100px);
+    opacity: 0;
+    transition:opacity 1s,transform 1s;
+    @include respond-below(md) {
+        transform:translateY(50px);
+        opacity: 0;
+        transition:opacity 1s,transform 1s;
+    }
 }
 
 .box-slicer{
@@ -112,13 +167,6 @@
         opacity: 80%;
     }
 }
-
-// .service-box:nth-child(3){
-//     margin: 10rem 0;
-//     @include respond-below(md) {
-//         margin: 3rem 0;
-//     }
-// }
 
 // ==========================================================================
 // $Services HeadLine
@@ -165,19 +213,56 @@
 // ==========================================================================
 
 .members-img{
+    opacity: 0;
     width: 17rem;
     height: 17rem;
+    object-fit: cover;
     box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.226);
+    transform:translateY(100px);
+    opacity: 0;
+    transition:opacity 1s,transform 1s;
     @include respond-below(md) {
         width: 10rem;
         height: 10rem;
         box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.226);
+        transform:translateY(50px);
+        opacity: 0;
+        transition:opacity 1s,transform 1s;
     }
 }
 
 // ==========================================================================
 // $Blogs Img
 // ==========================================================================
+
+.blog-box{
+    width: 30%;
+    @include respond-below(md) {
+        width: 70%;
+    }
+}
+
+.blog-tag{
+    color: $black;
+    background-color: $white;
+    padding: 0.1rem 0.3rem;
+    line-height: 0.2rem;
+}
+
+//cd : createDate
+.blog-cd{
+    line-height: 0.2rem;
+    color: $white;
+}
+
+.card-body{
+    background-color: $black;
+    color: $white;
+}
+
+.blog-title{
+    
+}
 
 .blog-img{
     width:auto;
@@ -186,14 +271,18 @@
     max-height:100%;
     @include respond-below(md) {
         width: 100%;
-        height: 15rem;
+        height: 12rem;
     }
 }
 
 .contact-img{
     width: 100%;
     height: 100%;
-    background-size: cover;
+    object-fit: cover;
+    @include respond-below(md) {
+        width: 120%;
+        height: 100%;
+    }
 }
 
 // ==========================================================================
@@ -210,6 +299,8 @@
 .form-group input{
     width: 80%;
     margin: 1% 0;
+    background-color: #C4C4C4;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     @include respond-below(md) {
         width: 100%;
         margin: 0.5% 0;
@@ -219,5 +310,10 @@
 .form-group textarea {
     resize: none;
     width: 80%;
-    height: 8rem;
+    height: 13rem;
+    background-color: #C4C4C4;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @include respond-below(md) {
+        width: 100%;
+    }
 }
