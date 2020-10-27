@@ -1,5 +1,5 @@
 # css files
 
-*.css
+*.min.css
 *.map
 debug.log
