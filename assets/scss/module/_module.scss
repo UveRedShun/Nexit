@@ -234,12 +234,12 @@
 // $Members Img (Membersセクションの画像)
 // ==========================================================================
 
-.testt{
-    position: relative;
-    height: 100%;
-}
+// .testt{
+//     position: relative;
+//     height: 100%;
+// }
 
-.testt:before{
+.t:before{
     content:"";
     position: absolute;
     top: 0;
@@ -255,7 +255,7 @@
     z-index: 10;
 }
 
-.testt:after{
+.t:after{
     content:"";
     position: absolute;
     bottom: 0;
@@ -270,7 +270,7 @@
 }
 
 .members-box{
-    height: 100vh;
+    height: 120%;
     @include respond-below(md) {
         height: 100%;
     }
