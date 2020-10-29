@@ -2,3 +2,40 @@
     opacity:1 !important;
     transform:translateX(0) !important;
 }
+
+// ==========================================================================
+// $Img Hover (on状態で画像が明るくなります)
+// ==========================================================================
+
+.about-img{
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all  0.3s ease;
+}
+
+.about-img:hover{
+    opacity: 70%;
+}
+
+.services-img{
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all  0.3s ease;
+}
+
+.services-img:hover{
+    opacity: 70%;
+}
+
+.blog-img{
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all  0.3s ease;
+}
+
+.blog-img:hover{
+    opacity: 70%;
+}
