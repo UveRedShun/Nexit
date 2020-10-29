@@ -2,8 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   line-height: 1.5rem;
   font-size: 1rem;
 }
@@ -26,10 +25,6 @@ section:nth-of-type(n+2) {
   }
 }
 
-#Members {
-  padding-bottom: 5rem;
-}
-
 footer {
   background-color: #000;
   z-index: 10;
@@ -42,8 +37,7 @@ footer {
 .mainVisual-img {
   width: auto;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .mainVisual-headline {
@@ -117,25 +111,17 @@ footer {
 }
 
 .about-image {
-  -webkit-transform: translateX(150px);
-          transform: translateX(150px);
+  transform: translateX(150px);
   opacity: 0;
-  -webkit-transition: opacity 2s,-webkit-transform 1.5s;
-  transition: opacity 2s,-webkit-transform 1.5s;
   transition: opacity 2s,transform 1.5s;
-  transition: opacity 2s,transform 1.5s,-webkit-transform 1.5s;
   padding: 0;
 }
 
 @media (max-width: 766px) {
   .about-image {
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
+    transform: translateY(50px);
     opacity: 0;
-    -webkit-transition: opacity 1s,-webkit-transform 1s;
-    transition: opacity 1s,-webkit-transform 1s;
     transition: opacity 1s,transform 1s;
-    transition: opacity 1s,transform 1s,-webkit-transform 1s;
   }
 }
 
@@ -170,24 +156,16 @@ footer {
   padding: 0;
   position: relative;
   overflow: hidden;
-  -webkit-transform: translateX(100px);
-          transform: translateX(100px);
+  transform: translateX(100px);
   opacity: 0;
-  -webkit-transition: opacity 1s,-webkit-transform 1s;
-  transition: opacity 1s,-webkit-transform 1s;
   transition: opacity 1s,transform 1s;
-  transition: opacity 1s,transform 1s,-webkit-transform 1s;
 }
 
 @media (max-width: 766px) {
   .services-imgBox {
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
+    transform: translateY(50px);
     opacity: 0;
-    -webkit-transition: opacity 1s,-webkit-transform 1s;
-    transition: opacity 1s,-webkit-transform 1s;
     transition: opacity 1s,transform 1s;
-    transition: opacity 1s,transform 1s,-webkit-transform 1s;
   }
 }
 
@@ -196,32 +174,23 @@ footer {
   padding: 0;
   position: relative;
   overflow: hidden;
-  -webkit-transform: translateX(-100px);
-          transform: translateX(-100px);
+  transform: translateX(-100px);
   opacity: 0;
-  -webkit-transition: opacity 1s,-webkit-transform 1s;
-  transition: opacity 1s,-webkit-transform 1s;
   transition: opacity 1s,transform 1s;
-  transition: opacity 1s,transform 1s,-webkit-transform 1s;
 }
 
 @media (max-width: 766px) {
   .services-imgBox__Seo {
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
+    transform: translateY(50px);
     opacity: 0;
-    -webkit-transition: opacity 1s,-webkit-transform 1s;
-    transition: opacity 1s,-webkit-transform 1s;
     transition: opacity 1s,transform 1s;
-    transition: opacity 1s,transform 1s,-webkit-transform 1s;
   }
 }
 
 .box-slicer {
   width: 500px;
   height: 120%;
-  -webkit-transform: rotate(-15deg) translateX(0);
-          transform: rotate(-15deg) translateX(0);
+  transform: rotate(-15deg) translateX(0);
   background-color: #000;
   z-index: 2;
   right: -220px;
@@ -234,8 +203,7 @@ footer {
   .box-slicer {
     width: 500px;
     height: 120%;
-    -webkit-transform: rotate(-15deg) translateX(0);
-            transform: rotate(-15deg) translateX(0);
+    transform: rotate(-15deg) translateX(0);
     background-color: #000;
     z-index: 2;
     right: -320px;
@@ -295,11 +263,44 @@ footer {
 .memberBg-img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
   opacity: 0.6;
+}
+
+.testt {
+  position: relative;
+  height: 100%;
+}
+
+.testt:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  /*ここで三角形のサイズを決める。
+    必ず幅100vwにして、ブラウザサイズいっぱいにしてください。*/
+  border-width: 40px 0px 0px 100vw;
+  border-color: #fff #fff #fff transparent;
+  box-shadow: px 0px 5px 3px rgba(0, 0, 0, 0.2) inset;
+  z-index: 10;
+}
+
+.testt:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  /*ここで三角形のサイズを決める。
+    必ず幅100vwにして、ブラウザサイズいっぱいにしてください。*/
+  border-width: 0 0 40px 100vw;
+  border-color: transparent transparent #fff transparent;
 }
 
 .members-box {
@@ -316,32 +317,21 @@ footer {
   opacity: 0;
   width: 17rem;
   height: 17rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.226);
-          box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.226);
-  -webkit-transform: translateY(100px);
-          transform: translateY(100px);
+  object-fit: cover;
+  box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.226);
+  transform: translateY(100px);
   opacity: 0;
-  -webkit-transition: opacity 1s,-webkit-transform 1s;
-  transition: opacity 1s,-webkit-transform 1s;
   transition: opacity 1s,transform 1s;
-  transition: opacity 1s,transform 1s,-webkit-transform 1s;
 }
 
 @media (max-width: 766px) {
   .members-img {
     width: 10rem;
     height: 10rem;
-    -webkit-box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.226);
-            box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.226);
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
+    box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.226);
+    transform: translateY(50px);
     opacity: 0;
-    -webkit-transition: opacity 1s,-webkit-transform 1s;
-    transition: opacity 1s,-webkit-transform 1s;
     transition: opacity 1s,transform 1s;
-    transition: opacity 1s,transform 1s,-webkit-transform 1s;
   }
 }
 
@@ -389,8 +379,7 @@ footer {
 .contact-img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 @media (max-width: 766px) {
@@ -411,8 +400,7 @@ footer {
   width: 80%;
   margin: 1% 0;
   background-color: #C4C4C4;
-  -webkit-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 @media (max-width: 766px) {
@@ -427,8 +415,7 @@ footer {
   width: 80%;
   height: 13rem;
   background-color: #C4C4C4;
-  -webkit-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 @media (max-width: 766px) {
@@ -437,48 +424,11 @@ footer {
   }
 }
 
-.testt {
-  position: relative;
-  height: 100%;
-}
-
-.testt:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  /*ここで三角形のサイズを決める。
-    必ず幅100vwにして、ブラウザサイズいっぱいにしてください。*/
-  border-width: 40px 0px 0px 100vw;
-  border-color: #fff #fff #fff transparent;
-  box-shadow: px 0px 5px 3px rgba(0, 0, 0, 0.2) inset;
-  z-index: 10;
-}
-
-.testt:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  /*ここで三角形のサイズを決める。
-    必ず幅100vwにして、ブラウザサイズいっぱいにしてください。*/
-  border-width: 0 0 40px 100vw;
-  border-color: transparent transparent #fff transparent;
-}
-
 .fadein {
   opacity: 1 !important;
-  -webkit-transform: translateX(0) !important;
-          transform: translateX(0) !important;
+  transform: translateX(0) !important;
 }
 
 * {
   font-family: 'Times New Roman', Times, serif;
 }
-/*# sourceMappingURL=style.css.map */
