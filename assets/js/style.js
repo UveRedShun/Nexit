@@ -1,9 +1,10 @@
 $(function(){
     $('a[href^="#"]').click(function(){
         var speed = 1000;
+        var marginExcept = 100; //section上のmargin対応
         var href= $(this).attr("href");
         var target = $(href == "#" || href == "" ? 'html' : href);
-        var position = target.offset().top;
+        var position = target.offset().top + marginExcept;
         $("html, body").animate({scrollTop:position}, speed, "swing");
         return false;
     });
