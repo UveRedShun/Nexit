@@ -16,7 +16,7 @@
 }
 
 section:nth-of-type(n+2) {
-  padding-top: 10rem;
+  padding-top: 5rem;
 }
 
 @media (max-width: 766px) {
@@ -447,14 +447,14 @@ footer {
   opacity: 70%;
 }
 
-.members-img {
+.blog-img {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all  0.3s ease;
 }
 
-.members-img:hover {
+.blog-img:hover {
   opacity: 70%;
 }
 
