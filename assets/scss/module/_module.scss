@@ -136,6 +136,21 @@
     }
 }
 
+.services-imgBox__Edu{
+    width: 100%;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    transform:translateX(100px);
+    opacity: 0;
+    transition:opacity 1s,transform 1s;
+    @include respond-below(md) {
+        transform:translateY(50px);
+        opacity: 0;
+        transition:opacity 1s,transform 1s;
+    }
+}
+
 .services-imgBox__Seo{
     width: 100%;
     padding: 0;
