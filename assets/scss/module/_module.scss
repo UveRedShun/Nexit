@@ -234,41 +234,6 @@
 // $Members Img (Membersセクションの画像)
 // ==========================================================================
 
-// .testt{
-//     position: relative;
-//     height: 100%;
-// }
-
-.t:before{
-    content:"";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    /*ここで三角形のサイズを決める。
-    必ず幅100vwにして、ブラウザサイズいっぱいにしてください。*/
-    border-width: 40px 0px 0px 100vw ;
-    border-color: #fff #fff #fff transparent ;
-    box-shadow: px 0px 5px 3px rgba(0, 0, 0, 0.2) inset;
-    z-index: 10;
-}
-
-.t:after{
-    content:"";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    /*ここで三角形のサイズを決める。
-    必ず幅100vwにして、ブラウザサイズいっぱいにしてください。*/
-    border-width: 0 0 40px 100vw ;
-    border-color: transparent transparent #fff transparent;
-}
-
 .members-box{
     height: 120%;
     @include respond-below(md) {

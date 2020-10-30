@@ -10,39 +10,31 @@ $(function(){
     });
 });
 
+function fadeIn(base){
+    var elemPos = $(base).offset().top;
+    var scroll = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    if (scroll > elemPos - windowHeight + 100){
+        $(base).addClass('fadein');
+    }
+}
+
 $(function(){
     $(window).scroll(function (){
         $('.about-image').each(function(){
-            var elemPos = $(this).offset().top;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            if (scroll > elemPos - windowHeight + 100){
-                $(this).addClass('fadein');
-            }
+            fadeIn('.about-image');
         });
         $('.members-img').each(function(){
-            var elemPos = $(this).offset().top;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            if (scroll > elemPos - windowHeight + 100){
-                $(this).addClass('fadein');
-            }
+            fadeIn('.members-img');
         });
         $('.services-imgBox').each(function(){
-            var elemPos = $(this).offset().top;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            if (scroll > elemPos - windowHeight + 100){
-                $(this).addClass('fadein');
-            }
+            fadeIn('.services-imgBox');
         });
         $('.services-imgBox__Seo').each(function(){
-            var elemPos = $(this).offset().top;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            if (scroll > elemPos - windowHeight + 100){
-                $(this).addClass('fadein');
-            }
+            fadeIn('.services-imgBox__Seo');
+        });
+        $('.services-imgBox__Edu').each(function(){
+            fadeIn('.services-imgBox__Edu');
         });
     });    
 });
