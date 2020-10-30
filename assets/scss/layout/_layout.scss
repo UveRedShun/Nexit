@@ -14,6 +14,7 @@ section:nth-of-type(n+2){
 .bg-members{
     height: 100%;
     position: relative;
+    background-image: url(../img/bg-member.jpg);
     background-color:rgba(255,255,255,0.7);
     background-blend-mode:lighten;
     background-attachment: fixed;
