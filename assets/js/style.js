@@ -55,3 +55,21 @@ var swiper = new Swiper('.swiper-container', {
         el: '.swiper-pagination',
     },
 });
+
+$(function() {
+    var navId = $('#global-nav');
+    var navClass = $('.nav-link');
+    offset = navId.offset();
+    $(window).scroll(function () {
+        if($(window).scrollTop() > offset.top + window.parent.screen.height - 100) {
+            navId.addClass('fixed');
+            navClass.removeClass('text-white');
+            navClass.addClass('text-dark');
+        } else {
+            navId.removeClass('fixed');
+            navClass.addClass('text-white');
+            navClass.removeClass('text-dark');
+
+        }
+    });
+});

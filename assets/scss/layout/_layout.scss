@@ -19,7 +19,8 @@ section:nth-of-type(n+2){
     background-blend-mode:lighten;
     background-attachment: fixed;
     background-size: cover;
-    background-position: center;
+    background-repeat:no-repeat;
+    background-position:50% 100%;
     margin-top: 10rem;
     padding-bottom: 10rem;
     @include respond-below(md) {
