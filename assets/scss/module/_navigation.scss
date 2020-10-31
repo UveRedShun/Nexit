@@ -1,0 +1,60 @@
+@import '../util/index';
+
+// ==========================================================================
+// $Nav Menu (スマホサイズのナビゲーション)
+// ==========================================================================
+
+.globalMenuSp {
+    display: none;
+    @include respond-below(md) {
+        display: none;
+        position: fixed;
+        z-index : 2;
+        top  : 0;
+        left : 0;
+        color: $white;
+        background: rgba(0,0,0,0.7);
+        text-align: center;
+        width: 100%;
+        opacity: 0;
+        transition: opacity .6s ease, visibility .6s ease;
+    }
+} 
+
+.globalMenuSp ul {
+    margin: auto;
+    padding: 33% 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.globalMenuSp ul li {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    transition: .4s all;
+}
+.globalMenuSp ul li:last-child {
+    padding-bottom: 0;
+}
+.globalMenuSp ul li:hover{
+    background :$light-gray;
+}
+
+.globalMenuSp ul li a {
+    display: block;
+    color: $white;
+    padding: 1em 0;
+    text-decoration :none;
+}
+
+.globalMenuSp.active {
+    opacity: 100;
+    display: block;
+}
+
+.navbar{
+    @include respond-below(md) {
+        display: none !important;
+    }
+}

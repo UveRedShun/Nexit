@@ -1,0 +1,60 @@
+@import '../util/index';
+
+// ==========================================================================
+// $Page Top (最上部に戻るボタン)
+// ==========================================================================
+
+#page_top{
+    width: 90px;
+    height: 90px;
+    position: fixed;
+    right: 3%;
+    bottom: 2.5rem;
+    opacity: 0.6;
+    z-index: 3;
+}
+#page_top a{
+    position: relative;
+    display: block;
+    width: 90px;
+    height: 90px;
+    text-decoration: none;
+}
+#page_top a::before{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f102';
+    font-size: 2rem;
+    color: $black;
+    position: absolute;
+    width: 1.3rem;
+    height: 1.3rem;
+    top: -5rem;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    @include respond-below(lg) {
+        font-size: 1.5rem;
+    }
+}
+#page_top a::after{
+    content: 'PAGE TOP';
+    font-size: 1rem;
+    color: $black;
+    position: absolute;
+    top: 45px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    color: $black;
+    @include respond-below(lg) {
+        font-size: 0.5rem;
+        top: 30px;
+    }
+}
+
+

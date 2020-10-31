@@ -25,12 +25,12 @@ section:not(:first-child):not(:last-child) {
   }
 }
 
-.test {
+.bg-members {
   background-color: rgba(255, 255, 255, 0.8);
   background-blend-mode: lighten;
 }
 
-.test::before {
+.bg-members::before {
   content: "";
   display: block;
   position: fixed;
@@ -41,21 +41,6 @@ section:not(:first-child):not(:last-child) {
   height: 100%;
   background: url(../img/bg-member.jpg) center no-repeat;
   background-size: cover;
-}
-
-.t::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  /*ここで三角形のサイズを決める。
-    必ず幅100vwにして、ブラウザサイズいっぱいにしてください。*/
-  border-width: 40px 0px 0px 100vw;
-  border-color: transparent #fff transparent;
-  z-index: 10;
 }
 
 footer {
@@ -436,66 +421,21 @@ footer {
   }
 }
 
-#page_top {
-  width: 90px;
-  height: 90px;
-  position: fixed;
-  right: 3%;
-  bottom: 2.5rem;
-  opacity: 0.6;
-  z-index: 3;
+.send-button {
+  width: 80%;
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem 0;
 }
 
-#page_top a {
-  position: relative;
-  display: block;
-  width: 90px;
-  height: 90px;
-  text-decoration: none;
-}
-
-#page_top a::before {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  content: '\f102';
-  font-size: 2rem;
-  color: #000;
-  position: absolute;
-  width: 1.3rem;
-  height: 1.3rem;
-  top: -5rem;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-  text-align: center;
-}
-
-@media (max-width: 959px) {
-  #page_top a::before {
-    font-size: 1.5rem;
+@media (max-width: 766px) {
+  .send-button {
+    width: 100%;
   }
 }
 
-#page_top a::after {
-  content: 'PAGE TOP';
-  font-size: 1rem;
-  color: #000;
-  position: absolute;
-  top: 45px;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-  text-align: center;
-  color: #000;
-}
-
-@media (max-width: 959px) {
-  #page_top a::after {
-    font-size: 0.5rem;
-    top: 30px;
-  }
+* {
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .hamburger {
@@ -561,6 +501,10 @@ footer {
   transform: rotate(-315deg);
 }
 
+* {
+  font-family: 'Times New Roman', Times, serif;
+}
+
 .globalMenuSp {
   display: none;
 }
@@ -600,7 +544,7 @@ footer {
 }
 
 .globalMenuSp ul li:hover {
-  background: #ddd;
+  background: #C4C4C4;
 }
 
 .globalMenuSp ul li a {
@@ -618,6 +562,72 @@ footer {
 @media (max-width: 766px) {
   .navbar {
     display: none !important;
+  }
+}
+
+* {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#page_top {
+  width: 90px;
+  height: 90px;
+  position: fixed;
+  right: 3%;
+  bottom: 2.5rem;
+  opacity: 0.6;
+  z-index: 3;
+}
+
+#page_top a {
+  position: relative;
+  display: block;
+  width: 90px;
+  height: 90px;
+  text-decoration: none;
+}
+
+#page_top a::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f102';
+  font-size: 2rem;
+  color: #000;
+  position: absolute;
+  width: 1.3rem;
+  height: 1.3rem;
+  top: -5rem;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+
+@media (max-width: 959px) {
+  #page_top a::before {
+    font-size: 1.5rem;
+  }
+}
+
+#page_top a::after {
+  content: 'PAGE TOP';
+  font-size: 1rem;
+  color: #000;
+  position: absolute;
+  top: 45px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+  color: #000;
+}
+
+@media (max-width: 959px) {
+  #page_top a::after {
+    font-size: 0.5rem;
+    top: 30px;
   }
 }
 
