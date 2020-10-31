@@ -567,7 +567,7 @@ footer {
 
 @media (max-width: 766px) {
   .globalMenuSp {
-    display: block;
+    display: none;
     position: fixed;
     z-index: 2;
     top: 0;
@@ -612,11 +612,12 @@ footer {
 
 .globalMenuSp.active {
   opacity: 100;
+  display: block;
 }
 
 @media (max-width: 766px) {
-  #global-nav {
-    display: none;
+  .navbar {
+    display: none !important;
   }
 }
 

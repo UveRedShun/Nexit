@@ -475,7 +475,7 @@
 .globalMenuSp {
     display: none;
     @include respond-below(md) {
-        display: block;
+        display: none;
         position: fixed;
         z-index : 2;
         top  : 0;
@@ -518,10 +518,11 @@
 
 .globalMenuSp.active {
     opacity: 100;
+    display: block;
 }
 
-#global-nav{
+.navbar{
     @include respond-below(md) {
-        display: none;
+        display: none !important;
     }
 }
