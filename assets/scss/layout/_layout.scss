@@ -1,27 +1,11 @@
 @import '../util/index';
 
-section:nth-of-type(n+2){
-    padding: 2.5rem 0;
+section:not(:first-child):not(:last-child){
+    padding: 5rem 0;
     @include respond-below(md) {
-        padding-top: 3rem 0;
+        padding: 3rem 0;
     }
 }
-
-// .Services{
-//     position: relative;
-//     padding-bottom: 5rem;
-//     @include respond-below(md) {
-//         padding-top: 3rem 0;
-//     }
-// }
-
-// .Services:after{
-//     border-style: solid;
-//     /*ここで三角形のサイズを決める。
-//     必ず幅100vwにして、ブラウザサイズいっぱいにしてください。*/
-//     border-width: 0 0 40px 100vw ;
-//     border-color: transparent transparent transparent #fff ;
-// }
 
 // ==========================================================================
 // $Members Section
