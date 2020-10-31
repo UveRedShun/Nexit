@@ -1,10 +1,9 @@
 $(function(){
     $('a[href^="#"]').click(function(){
         var speed = 1000;
-        var marginExcept = 100; //section上のmargin対応
         var href= $(this).attr("href");
         var target = $(href == "#" || href == "" ? 'html' : href);
-        var position = target.offset().top + marginExcept;
+        var position = target.offset().top;
         $("html, body").animate({scrollTop:position}, speed, "swing");
         return false;
     });
@@ -59,9 +58,21 @@ $(function(){
             navId.removeClass('fixed');
             navClass.addClass('text-white');
             navClass.removeClass('text-dark');
-
         }
     });
+    $('.hamburger').click(function() {
+        $(this).toggleClass('active');
+        if ($(this).hasClass('active')) {
+            $('.globalMenuSp').addClass('active');
+        } else {
+            $('.globalMenuSp').removeClass('active');
+        }
+    });
+    $('.hamburger-list a').click(function(){
+        $(this).toggleClass('active');
+        $('.globalMenuSp').removeClass('active');
+        $('.hamburger').removeClass('active');
+    })
 });
 
 function fadeIn(base){
