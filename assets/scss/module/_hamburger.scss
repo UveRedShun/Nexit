@@ -1,0 +1,62 @@
+
+@import '../util/index';
+
+// ==========================================================================
+// $Hamburger Menu (ハンバーガーメニュー)
+// ==========================================================================
+
+.hamburger {
+    display: none;
+    @include respond-below(md) {
+    display : block;
+    position: fixed;
+    z-index : 100;
+    right : 13px;
+    top   : 12px;
+    width : 42px;
+    height: 42px;
+    cursor: pointer;
+    text-align: center;
+    }
+}
+.hamburger span {
+    @include respond-below(md) {
+    display : block;
+    position: absolute;
+    width   : 30px;
+    height  : 2px ;
+    left    : 6px;
+    background : $dark-gray;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition   : 0.5s ease-in-out;
+    transition        : 0.5s ease-in-out;
+    }
+}
+.hamburger span:nth-child(1) {
+    top: 10px;
+}
+.hamburger span:nth-child(2) {
+    top: 20px;
+}
+.hamburger span:nth-child(3) {
+    top: 30px;
+}
+
+  /* ナビ開いてる時のボタン */
+.hamburger.active span:nth-child(1) {
+    top : 16px;
+    left: 6px;
+    background : $white;
+    -webkit-transform: rotate(315deg);
+    -moz-transform   : rotate(315deg);
+    transform        : rotate(315deg);
+}
+
+.hamburger.active span:nth-child(2),
+.hamburger.active span:nth-child(3) {
+    top: 16px;
+    background : $white;
+    -webkit-transform: rotate(-315deg);
+    -moz-transform   : rotate(-315deg);
+    transform        : rotate(-315deg);
+}

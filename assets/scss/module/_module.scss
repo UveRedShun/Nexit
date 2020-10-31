@@ -49,12 +49,12 @@
     margin: 3rem;
     font-size: 6rem;
     padding-left: 2rem;
-    border-left: solid 10px #C4C4C4;
+    border-left: solid 10px $light-gray;
     @include respond-below(md) {
         font-size: 3rem;
         margin: 2rem 0 2rem 0;
         padding-left: 1rem;
-        border-left: solid 5px #C4C4C4;
+        border-left: solid 5px $light-gray;
     }
 }
 
@@ -62,12 +62,12 @@
     margin: 0 0 3rem 0;
     font-size: 3rem;
     padding-left: 1rem;
-    border-left: solid 7px #C4C4C4;
+    border-left: solid 7px $light-gray;
     @include respond-below(md) {
         font-size: 3rem;
         margin: 2rem 0 2rem 0;
         padding-left: 1rem;
-        border-left: solid 5px #C4C4C4;
+        border-left: solid 5px $light-gray;
     }
 }
 
@@ -336,7 +336,7 @@
 .form-group input{
     width: 80%;
     margin: 1% 0;
-    background-color: #C4C4C4;
+    background-color: $light-gray;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     @include respond-below(md) {
         width: 100%;
@@ -348,181 +348,20 @@
     resize: none;
     width: 80%;
     height: 13rem;
-    background-color: #C4C4C4;
+    background-color: $light-gray;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     @include respond-below(md) {
         width: 100%;
     }
 }
 
-// ==========================================================================
-// $Page Top (最上部に戻るボタン)
-// ==========================================================================
-
-#page_top{
-    width: 90px;
-    height: 90px;
-    position: fixed;
-    right: 3%;
-    bottom: 2.5rem;
-    opacity: 0.6;
-    z-index: 3;
-}
-#page_top a{
-    position: relative;
-    display: block;
-    width: 90px;
-    height: 90px;
-    text-decoration: none;
-}
-#page_top a::before{
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    content: '\f102';
-    font-size: 2rem;
-    color: $black;
-    position: absolute;
-    width: 1.3rem;
-    height: 1.3rem;
-    top: -5rem;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
-    text-align: center;
-    @include respond-below(lg) {
-        font-size: 1.5rem;
-    }
-}
-#page_top a::after{
-    content: 'PAGE TOP';
-    font-size: 1rem;
-    color: $black;
-    position: absolute;
-    top: 45px;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
-    text-align: center;
-    color: $black;
-    @include respond-below(lg) {
-        font-size: 0.5rem;
-        top: 30px;
-    }
-}
-
-// ==========================================================================
-// $Hamburger Menu (ハンバーガーメニュー)
-// ==========================================================================
-
-.hamburger {
-    display: none;
+.send-button{
+    width: 80%;
+    background-color: $black;
+    color: $white;
+    padding: 0.5rem 0;
     @include respond-below(md) {
-    display : block;
-    position: fixed;
-    z-index : 100;
-    right : 13px;
-    top   : 12px;
-    width : 42px;
-    height: 42px;
-    cursor: pointer;
-    text-align: center;
-    }
-}
-.hamburger span {
-    @include respond-below(md) {
-    display : block;
-    position: absolute;
-    width   : 30px;
-    height  : 2px ;
-    left    : 6px;
-    background : #555;
-    -webkit-transition: 0.5s ease-in-out;
-    -moz-transition   : 0.5s ease-in-out;
-    transition        : 0.5s ease-in-out;
-    }
-}
-.hamburger span:nth-child(1) {
-    top: 10px;
-}
-.hamburger span:nth-child(2) {
-    top: 20px;
-}
-.hamburger span:nth-child(3) {
-    top: 30px;
-}
-
-  /* ナビ開いてる時のボタン */
-.hamburger.active span:nth-child(1) {
-    top : 16px;
-    left: 6px;
-    background : #fff;
-    -webkit-transform: rotate(315deg);
-    -moz-transform   : rotate(315deg);
-    transform        : rotate(315deg);
-}
-
-.hamburger.active span:nth-child(2),
-.hamburger.active span:nth-child(3) {
-    top: 16px;
-    background : #fff;
-    -webkit-transform: rotate(-315deg);
-    -moz-transform   : rotate(-315deg);
-    transform        : rotate(-315deg);
-}
-
-.globalMenuSp {
-    display: none;
-    @include respond-below(md) {
-        display: none;
-        position: fixed;
-        z-index : 2;
-        top  : 0;
-        left : 0;
-        color: #fff;
-        background: rgba(0,0,0,0.7);
-        text-align: center;
         width: 100%;
-        opacity: 0;
-        transition: opacity .6s ease, visibility .6s ease;
-    }
-} 
-
-.globalMenuSp ul {
-    margin: auto;
-    padding: 33% 0;
-    width: 100%;
-    height: 100vh;
-}
-
-.globalMenuSp ul li {
-    list-style-type: none;
-    padding: 0;
-    width: 100%;
-    transition: .4s all;
-}
-.globalMenuSp ul li:last-child {
-    padding-bottom: 0;
-}
-.globalMenuSp ul li:hover{
-    background :#ddd;
-}
-
-.globalMenuSp ul li a {
-    display: block;
-    color: #fff;
-    padding: 1em 0;
-    text-decoration :none;
-}
-
-.globalMenuSp.active {
-    opacity: 100;
-    display: block;
-}
-
-.navbar{
-    @include respond-below(md) {
-        display: none !important;
     }
 }
+
