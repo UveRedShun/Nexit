@@ -20,8 +20,6 @@ section:not(:first-child):not(:last-child){
     content:"";
     display:block;
     position:fixed;
-    background-color:rgba(255,255,255,0.7);
-    background-blend-mode:lighten;
     top:0;
     left:0;
     z-index:-1;
@@ -29,6 +27,21 @@ section:not(:first-child):not(:last-child){
     height:100%;
     background: url(../img/bg-member.jpg) center no-repeat;
     background-size: cover;
+}
+
+.t::after{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    /*ここで三角形のサイズを決める。
+    必ず幅100vwにして、ブラウザサイズいっぱいにしてください。*/
+    border-width: 40px 0px 0px 100vw ;
+    border-color: transparent #fff transparent;
+    z-index: 10;
 }
 
 // .test2{
