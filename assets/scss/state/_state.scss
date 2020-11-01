@@ -1,3 +1,7 @@
+// ==========================================================================
+// $FadeIn (スクロール時の画像のフェードイン)
+// ==========================================================================
+
 .fadein{
     opacity:1 !important;
     transform:translateX(0) !important;
@@ -7,38 +11,25 @@
 // $Img Hover (on状態で画像が明るくなります)
 // ==========================================================================
 
-.about-img{
+.sectionImg-img__About,
+.services-img,
+.blog-img
+{
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all  0.3s ease;
 }
 
-.about-img:hover{
-    opacity: 70%;
-}
-
-.services-img{
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all  0.3s ease;
-}
-
-.services-img:hover{
-    opacity: 70%;
-}
-
-.blog-img{
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all  0.3s ease;
-}
-
+.sectionImg-img__About:hover,
+.services-img:hover,
 .blog-img:hover{
     opacity: 70%;
 }
+
+// ==========================================================================
+// $FadeIn (スクロール時のナビゲーション上部固定)
+// ==========================================================================
 
 .fixed {
     position: fixed;
