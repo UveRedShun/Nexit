@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <title>Nexit</title>
+    <!-- ブログセクションのカードフリック用のパッケージ -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
     <script src="https://kit.fontawesome.com/7849ae5b05.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="./assets/scss/style.css">
@@ -15,15 +16,17 @@
     <div id="page_top"><a href=""></a></div>
         <div id="mainVisual">
             <div class="position-relative vh-100">
-                <div class="position-absolute mainVisual-img">
-                    <img loading="lazy" class="vh-100 vw-100 mainVisual-img" src="./assets/img/mainvisual.webp" alt="">
+                <div class="position-absolute">
+                    <img loading="lazy" class="vh-100 vw-100 mainVisual-img" src="./assets/img/mainvisual.webp" alt="メイン画像">
                 </div>
+                <!-- ハンバーガーメニュー アイコン -->
                 <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
                 </div>
-                <div class="globalMenuSp">
+                <!-- スマホサイズ時ハンバーガーメニュー押下時に起動するナビゲーション -->
+                <div id="navMenu-modal">
                     <ul>
                         <li class="hamburger-list"><a href="#About">ABOUT</a></li>
                         <li class="hamburger-list"><a href="#Services">SERVICES</a></li>
@@ -32,23 +35,24 @@
                         <li class="hamburger-list"><a href="#Contact">CONTACT</a></li>
                     </ul>
                 </div>
-                <nav id="global-nav" class="navbar navbar-expand-md pt-5 pl-5">
+                <!-- ディスプレイサイズ時のナビゲーション -->
+                <nav id="global-nav" class="nav navbar navbar-expand-md">
                     <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ml-md-auto">
+                        <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="mainVisual-nav__text nav-link text-white" href="#About">ABOUT</a>
+                                <a class="nav-txt nav-link" href="#About">ABOUT</a>
                             </li>
                             <li class="nav-item">
-                                <a class="mainVisual-nav__text nav-link text-white" href="#Services">SERVICES</a>
+                                <a class="nav-txt nav-link" href="#Services">SERVICES</a>
                             </li>
                             <li class="nav-item">
-                                <a class="mainVisual-nav__text nav-link text-white" href="#Members">MEMBERS</a>
+                                <a class="nav-txt nav-link" href="#Members">MEMBERS</a>
                             </li>
                             <li class="nav-item">
-                                <a class="mainVisual-nav__text nav-link text-white" href="#Blogs">BLOGS</a>
+                                <a class="nav-txt nav-link" href="#Blogs">BLOGS</a>
                             </li>
                             <li class="nav-item">
-                                <a class="mainVisual-nav__text nav-link text-white" href="#Contact">CONTACT</a>
+                                <a class="nav-txt nav-link" href="#Contact">CONTACT</a>
                             </li>    
                         </ul>
                     </div>
@@ -60,22 +64,22 @@
                 </div>
             </div>
         </div>
-        <section id="About" class="bg-white">
+        <section id="About" class="section sectionAbout">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
-                        <div class="about-title">
-                            <h2 class="section-title">ABOUT</h2>
+                        <div class="sectionTitle sectionTitle__About">
+                            <h2 class="sectionTitle-txt sectionTitle-txt__About">ABOUT</h2>
                         </div>    
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 col-md-11 d-md-flex flex-row-reverse mx-auto">
-                        <div class="about-image col-md-5 mx-auto">
-                            <img loading="lazy" class="about-img" src="./assets/img/about.webp" alt="紹介">
+                        <div class="sectionImg sectionImg__About col-md-5 mx-auto">
+                            <img loading="lazy" class="sectionImg-img sectionImg-img__About" src="./assets/img/about.webp" alt="紹介">
                         </div>
-                        <div class="section-text about-text col-md-5 mx-auto">
-                            <p>
+                        <div class="sectionTxt SectionTxt__About col-md-5 mx-auto">
+                            <p class="sectionTxt-txt Section-txt__About">
                                 ご依頼主さまの課題に寄り添い、保守性の高いサイト制作サービス、業務効率化のツール作成サービス、またその経験から初学者をはじめとするプログラミング学習支援を展開しています。
                             </p>
                         </div>
@@ -83,25 +87,25 @@
                 </div>
             </div>
         </section>
-        <section id="Services" class="bg-white">
+        <section id="Services" class="section sectionServices">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
-                        <div class="services-title">
-                            <h2 class="section-title">Services</h2>
-                        </div>    
+                        <div class="sectionTitle sectionTitle__Services">
+                            <h2 class="sectionTitle-txt sectionTitle-txt__Services">Services</h2>
+                        </div>     
                     </div>
                 </div>
-                <div class="row service-box">
+                <div class="row serviceInner">
                     <div class="col-12 col-md-11 d-md-flex flex-row-reverse mx-auto">
-                        <div class="services-imgBox col-md-5 mx-auto">
+                        <div class="serviceImgBox serviceImgBox__Pro col-md-5 mx-auto">
                             <img loading="lazy" class="services-img" src="./assets/img/programing.webp" alt="プログラミング">
                             <div class="box-slicer"></div>
                             <div class="col-lg-5 position-absolute services-headline__Pro">
                                 <h3 class="services-headline__text">Programing</h3>
                             </div>
                         </div>
-                        <div class="section-text services-text col-md-5 mx-auto">
+                        <div class="sectionTxt services-text col-md-5 mx-auto">
                             <p>普段は金融系のSEとして活動しております。使用言語は主に、C#やVB.Net、VBA。
                                 保守性の高いシステムの開発やVBAを用いた業務の効率化に従事しております。
                                 お気軽にご相談ください。
@@ -109,16 +113,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="row service-box my-5">
+                <div class="row serviceInner my-5">
                     <div class="col-12 col-md-11 d-md-flex flex-row mx-auto">
-                        <div class="services-imgBox__Seo col-md-5 mx-auto">
+                        <div class="serviceImgBox serviceImgBox__Seo col-md-5 mx-auto">
                             <img loading="lazy" class="services-img" src="./assets/img/seo.webp" alt="SEO">
                             <div class="box-slicer"></div>
                             <div class="col-lg-5 position-absolute services-headline__Seo">
                                 <h3 class="services-headline__text">SEO/Coding</h3>
                             </div>
                         </div>
-                        <div class="section-text services-text col-md-5 mx-auto">
+                        <div class="sectionTxt services-text col-md-5 mx-auto">
                             <p>WEBサイト運営やアパレルブランドに携わった経験を活かし、
                                 主に、HTML5、CSS3、JavaScriptを用いたSEOに強いサイトのコーディングを行うことができます。
                                 お気軽にご相談ください。
@@ -126,16 +130,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="row service-box">
+                <div class="row serviceInner">
                     <div class="col-12 col-md-11 d-md-flex flex-row-reverse mx-auto">
-                        <div class="services-imgBox__Edu col-md-5 mx-auto test">
+                        <div class="serviceImgBox serviceImgBox__Edu col-md-5 mx-auto test">
                             <img loading="lazy" class="services-img" src="./assets/img/website.webp" alt="Website">
                             <div class="box-slicer"></div>
                             <div class="col-lg-5 position-absolute services-headline__Edu">
                                 <h3 class="services-headline__text">Education</h3>
                             </div>
                         </div>
-                        <div class="section-text services-text col-md-5 mx-auto">
+                        <div class="sectionTxt services-text col-md-5 mx-auto">
                             <p>大手のプログラミングスクールでの講師経験や100人以上のプログラミングコミュニティを創設・運営した経験から、
                                 スクール同等のコンテンツ、初学者に寄り添うサポートを行うことができます。
                                 ご興味ある方はお気軽にご相談ください。
@@ -148,49 +152,49 @@
         <section id="Members" class="bg-members">
             <div class="row">
                 <div class="col-11">
-                    <div class="members-title ml-3">
-                        <h2 class="section-title">Members</h2>
-                    </div>    
+                    <div class="sectionTitle sectionTitle__Members">
+                        <h2 class="sectionTitle-txt sectionTitle-txt__Members">Members</h2>
+                    </div>     
                 </div>
             </div>
             <div class="row">
                 <div class="col-11 col-md-4 mx-auto">
-                    <div class="members-img__w text-center py-4">
-                        <img loading="lazy" class="members-img rounded-circle" src="./assets/img/shunta.webp" alt="shunta">
+                    <div class="memberImg memberImg__Shunta text-center py-4">
+                        <img loading="lazy" class="memberImg-img memberImg-img__Shunta rounded-circle" src="./assets/img/shunta.webp" alt="shunta">
                     </div>
-                    <div class="members-text__w">
-                        <p class="text-center">WATABE SHUNTA</p>
-                        <p>ここにテキストが入ります。ここにテキストが入ります。
+                    <div class="memberTxt memberTxt__Shunta">
+                        <p class="memberTxt-nm memberTxt-nm__Shunta text-center">WATABE SHUNTA</p>
+                        <p class="memberTxt-txt memberTxt-txt__Shunta">ここにテキストが入ります。ここにテキストが入ります。
                             ここにテキストが入ります。ここにテキストが入ります。
                         </p>
                     </div>
                 </div>
                 <div class="col-11 col-md-4 mx-auto">
-                    <div class="members-img__n text-center py-4">
-                        <img loading="lazy" class="members-img rounded-circle" src="./assets/img/man.webp" alt="sho">
+                    <div class="memberImg memberImg__Sho text-center py-4">
+                        <img loading="lazy" class="memberImg-img memberImg-img__Sho rounded-circle" src="./assets/img/man.webp" alt="sho">
                     </div>
-                    <div class="members-text__n">
-                        <p class="text-center">NIIKURA SHO</p>
-                        <p>ここにテキストが入ります。ここにテキストが入ります。
+                    <div class="memberTxt memberTxt__Sho">
+                        <p class="memberTxt-nm memberTxt-nm__Sho text-center">NIIKURA SHO</p>
+                        <p class="memberTxt-txt memberTxt-txt__Sho">ここにテキストが入ります。ここにテキストが入ります。
                             ここにテキストが入ります。ここにテキストが入ります。
                         </p>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="Blogs" class="bg-white">
-            <div class="container-fluid test-inner">
+        <section id="Blogs" class="section sectionBlogs">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
-                        <div class="blogs-title">
-                            <h2 class="section-title">Blogs</h2>
+                        <div class="sectionTitle sectionTitle__Blogs">
+                            <h2 class="sectionTitle-txt sectionTitle-txt__Blogs">Blogs</h2>
                         </div>    
                     </div>
                 </div>
                 <div class="row">
                     <div class="swiper-container py-5">
                         <div class="swiper-wrapper">
-                            <div class="blog-box swiper-slide">
+                            <div class="blogBox swiper-slide">
                                 <div class="card">
                                     <img loading="lazy" class="blog-img" src="./assets/img/blogs.webp" alt="blog">
                                     <div class="card-body pt-0">
@@ -201,7 +205,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="blog-box swiper-slide">
+                            <div class="blogBox swiper-slide">
                                 <div class="card">
                                     <img loading="lazy" class="blog-img" src="./assets/img/blogs.webp" alt="blog">
                                     <div class="card-body pt-0">
@@ -212,7 +216,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="blog-box swiper-slide">
+                            <div class="blogBox swiper-slide">
                                 <div class="card">
                                     <img loading="lazy" class="blog-img" src="./assets/img/blogs.webp" alt="blog">
                                     <div class="card-body pt-0">
@@ -223,7 +227,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="blog-box swiper-slide">
+                            <div class="blogBox swiper-slide">
                                 <div class="card">
                                     <img loading="lazy" class="blog-img" src="./assets/img/blogs.webp" alt="blog">
                                     <div class="card-body pt-0">
@@ -234,7 +238,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="blog-box swiper-slide">
+                            <div class="blogBox swiper-slide">
                                 <div class="card">
                                     <img loading="lazy" class="blog-img" src="./assets/img/blogs.webp" alt="blog">
                                     <div class="card-body pt-0">
@@ -251,18 +255,18 @@
                 </div>
             </div>
         </section>
-        <section id="Contact" class="bg-white pb-0">
+        <section id="Contact" class="section sectionContact">
             <div class="container-fluid px-0">
                 <div class="position-relative">
-                    <div class="position-absolute contact-img">
-                        <img loading="lazy" class="contact-img" src="./assets/img/contact.webp" alt="blog">
+                    <div class="position-absolute bgImg">
+                        <img loading="lazy" class="bgImg-Contact" src="./assets/img/contact.webp" alt="blog">
                     </div>
                     <div class="col-11 col-md-10 py-5 form-box mx-auto">
                         <div class="row bg-light py-5">
                             <div class="col-12 col-md-5 ml-auto">
-                                <div class="section-title__contact">
-                                    <h2>Contact</h2>
-                                </div>    
+                                <div class="sectionTitle__Contact">
+                                    <h2 class="sectionTitle-txt__Contact">Contact</h2>
+                                </div>     
                                 <div class="contact-text my-4">
                                     <p>弊サイトを最後までご覧いただきありがとうございます。
                                         サイト制作から学習サポートまで、サービスに対するご質問、ご依頼等ございましたらお気軽にお問い合わせください。
@@ -281,12 +285,12 @@
                                         <input type="text" id="contactInputCompany" placeholder="会社名">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" id="contactInputrequire" placeholder="ご用件">
+                                        <input type="text" id="contactInputRequire" placeholder="ご用件">
                                     </div>
                                     <div class="form-group">
                                         <textarea id="contactInputContent" placeholder="お問い合わせ内容"></textarea>
                                     </div>
-                                    <button type="submit" class="send-button">SEND</button>
+                                    <button type="submit" class="button-send">SEND</button>
                                 </form>
                             </div>
                         </div>
@@ -297,9 +301,9 @@
         <footer>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12 text-center">
-                        <div class="copyright">
-                            <p class="text-white pt-3">Copyright © 2020 Nexit All Rights Reserved.</p>
+                    <div class="col-12">
+                        <div class="footerTxt">
+                            <p class="footerTxt-txt">Copyright © 2020 Nexit All Rights Reserved.</p>
                         </div>
                     </div>
                 </div>
@@ -307,6 +311,7 @@
         </footer>
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <!-- ブログセクションのカードフリック用のパッケージ -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
     <script src="./assets/js/style.js"></script>
 </body>
