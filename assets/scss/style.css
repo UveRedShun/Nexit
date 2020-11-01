@@ -657,28 +657,8 @@ footer {
   transform: translateX(0) !important;
 }
 
-.about-img {
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all  0.3s ease;
-}
-
-.about-img:hover {
-  opacity: 70%;
-}
-
-.services-img {
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all  0.3s ease;
-}
-
-.services-img:hover {
-  opacity: 70%;
-}
-
+.sectionImg-img__About,
+.services-img,
 .blog-img {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -686,6 +666,8 @@ footer {
   transition: all  0.3s ease;
 }
 
+.sectionImg-img__About:hover,
+.services-img:hover,
 .blog-img:hover {
   opacity: 70%;
 }
