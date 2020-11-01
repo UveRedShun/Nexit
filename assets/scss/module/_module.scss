@@ -36,16 +36,21 @@
 // $MainVisual Navigation (メイン画像のナビゲーション)
 // ==========================================================================
 
-.mainVisual-nav__text{
+.nav-txt{
     font-size: 1.7rem;
+    margin: 0 0.25rem;
     color: $white;
+}
+
+.nav{
+    padding-top: 2rem;
 }
 
 // ==========================================================================
 // $Section Title (各セクションの見出し)
 // ==========================================================================
 
-.section-title{
+.sectionTitle-txt{
     margin: 3rem;
     font-size: 6rem;
     padding-left: 2rem;
@@ -58,7 +63,7 @@
     }
 }
 
-.section-title__contact{
+.sectionTitle-txt__Contact{
     margin: 0 0 3rem 0;
     font-size: 3rem;
     padding-left: 1rem;
@@ -75,7 +80,7 @@
 // $Section Text (各セクション内の紹介文)
 // ==========================================================================
 
-.section-text{
+.sectionTxt{
     padding-top: 3rem;
     @include respond-below(md) {
         padding-top: 1.5rem;
@@ -86,7 +91,7 @@
 // $About Img (Aboutセクション内の画像)
 // ==========================================================================
 
-.about-image{
+.sectionImg__About{
     transform:translateX(150px);
     opacity: 0;
     transition:opacity 2s,transform 1.5s;
@@ -98,7 +103,7 @@
     }
 }
 
-.about-img{
+.sectionImg-img__About{
     width: 100%;
     height: 25rem;
     @include respond-below(md) {
@@ -121,7 +126,7 @@
     }
 }
 
-.services-imgBox{
+.serviceImgBox__Pro{
     width: 100%;
     padding: 0;
     position: relative;
@@ -136,7 +141,7 @@
     }
 }
 
-.services-imgBox__Edu{
+.serviceImgBox__Edu{
     width: 100%;
     padding: 0;
     position: relative;
@@ -151,7 +156,7 @@
     }
 }
 
-.services-imgBox__Seo{
+.serviceImgBox__Seo{
     width: 100%;
     padding: 0;
     position: relative;
@@ -256,7 +261,7 @@
     }
 }
 
-.members-img{
+.memberImg-img{
     width: 17rem;
     height: 17rem;
     object-fit: cover;
@@ -276,7 +281,7 @@
 // $Blogs Img (blogsセクションの画像)
 // ==========================================================================
 
-.blog-box{
+.blogBox{
     width: 30%;
     @include respond-below(md) {
         width: 70%;
@@ -312,7 +317,16 @@
     }
 }
 
-.contact-img{
+// ==========================================================================
+// $Contact Section Background Img (コンタクトセクションの背景画像)
+// ==========================================================================
+
+.bgImg{
+    width: 100%;
+    height: 100%;
+}
+
+.bgImg-Contact{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -355,7 +369,7 @@
     }
 }
 
-.send-button{
+.button-send{
     width: 80%;
     background-color: $black;
     color: $white;
