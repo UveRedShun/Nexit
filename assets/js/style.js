@@ -84,7 +84,7 @@ $(function(){
     $('.hamburger-list a').click(function(){
         $(this).toggleClass('active');
         navModal.removeClass('active');
-        navModal.removeClass('active');
+        $('.hamburger').removeClass('active');
     })
 });
 
