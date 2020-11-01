@@ -1,6 +1,8 @@
 $(function(){
+    // aタグから該当セクションへの画面移動
     $('a[href^="#"]').click(function(){
         var speed = 1000;
+        // セクション上のmargintop考慮
         var mHeight = 50;
         var href= $(this).attr("href");
         var target = $(href == "#" || href == "" ? 'html' : href);
@@ -8,6 +10,7 @@ $(function(){
         $("html, body").animate({scrollTop:position}, speed, "swing");
         return false;
     });
+    // pageTopボタンの表示有無
     var $arrowBtn = $('#page_top');
     var isHidden = true;
     $arrowBtn.hide();
@@ -24,31 +27,40 @@ $(function(){
             }
         }
     });
+    // pageTopボタン押下時の動作
     $arrowBtn.click(function(){  
         $('html, body').animate({
                 'scrollTop': 0
             }, 1000);
             return false;
     });
+    // 画像のフェードイン(下に関数を用意)
     $(window).scroll(function (){
-        $('.about-image').each(function(){
-            fadeIn('.about-image');
+        $('.sectionImg__About').each(function(){
+            fadeIn('.sectionImg__About');
         });
-        $('.members-img').each(function(){
-            fadeIn('.members-img');
+        $('.memberImg-img__Shunta').each(function(){
+            fadeIn('.memberImg-img__Shunta');
         });
-        $('.services-imgBox').each(function(){
-            fadeIn('.services-imgBox');
+        $('.memberImg-img__Sho').each(function(){
+            fadeIn('.memberImg-img__Sho');
         });
-        $('.services-imgBox__Seo').each(function(){
-            fadeIn('.services-imgBox__Seo');
+        $('.serviceImgBox__Pro').each(function(){
+            fadeIn('.serviceImgBox__Pro');
         });
-        $('.services-imgBox__Edu').each(function(){
-            fadeIn('.services-imgBox__Edu');
+        $('.serviceImgBox__Seo').each(function(){
+            fadeIn('.serviceImgBox__Seo');
         });
-    });   
+        $('.serviceImgBox__Edu').each(function(){
+            fadeIn('.serviceImgBox__Edu');
+        });
+    });
+    // ディスプレイサイズ時のナビゲーション
     var navId = $('#global-nav');
+    // ディスプレイサイズ時のナビゲーションアイテム
     var navClass = $('.nav-link');
+    // スマホ時のハンバーガーメニュー押下時ナビゲーションモーダル
+    var navModal = $('#navMenu-modal')
     offset = navId.offset();
     $(window).scroll(function () {
         if($(window).scrollTop() > offset.top + window.parent.screen.height - 100) {
@@ -64,18 +76,19 @@ $(function(){
     $('.hamburger').click(function() {
         $(this).toggleClass('active');
         if ($(this).hasClass('active')) {
-            $('.globalMenuSp').addClass('active');
+            navModal.addClass('active');
         } else {
-            $('.globalMenuSp').removeClass('active');
+            navModal.removeClass('active');
         }
     });
     $('.hamburger-list a').click(function(){
         $(this).toggleClass('active');
-        $('.globalMenuSp').removeClass('active');
-        $('.hamburger').removeClass('active');
+        navModal.removeClass('active');
+        navModal.removeClass('active');
     })
 });
 
+// imgのフェードイン用 js関数
 function fadeIn(base){
     var elemPos = $(base).offset().top;
     var scroll = $(window).scrollTop();
@@ -85,6 +98,7 @@ function fadeIn(base){
     }
 }
 
+// Blogカードフリック用のjs
 var swiper = new Swiper('.swiper-container', {
         effect: 'coverflow',
         grabCursor: true,

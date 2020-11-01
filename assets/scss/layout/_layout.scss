@@ -1,10 +1,14 @@
 @import '../util/index';
 
-section:not(:first-child):not(:last-child){
+section{
     padding: 5rem 0;
     @include respond-below(md) {
         padding: 3rem 0;
     }
+}
+
+.sectionAbout, .sectionServices, .sectionBlogs, .sectionContact{
+    background-color: $white;
 }
 
 // ==========================================================================
@@ -29,11 +33,18 @@ section:not(:first-child):not(:last-child){
     background-size: cover;
 }
 
+.sectionContact{
+    padding-bottom: 0;
+}
+
 // ==========================================================================
 // $Footer
 // ==========================================================================
 
 footer{
     background-color: $black;
+    color: $white;
     z-index: 10;
+    text-align: center;
+    padding-top: 1rem;
 }
